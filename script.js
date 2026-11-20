@@ -14,14 +14,32 @@ new Chart(canvas, {
     datasets: [{
       label: 'Number of votes',
       data: votes              // values (same order as labels!)
-    }, {
-      label: 'Second vote',
-      data: secondVotes
     }]
   },
   options: {
     scales: {
       y: { beginAtZero: true } // y-axis starts at 0
+    }
+  }
+});
+
+// Get the second canvas element from the page
+const secondCanvas = document.getElementById('secondChart');
+
+// Create a second chart
+new Chart(secondCanvas, {
+  type: 'bar',
+  data: {
+    labels: places,
+    datasets: [{
+      label: 'Second vote',
+      data: secondVotes,
+      backgroundColor: 'rgba(54, 162, 235, 0.7)'
+    }]
+  },
+  options: {
+    scales: {
+      y: { beginAtZero: true }
     }
   }
 });
