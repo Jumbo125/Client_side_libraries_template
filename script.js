@@ -2,8 +2,8 @@
 const canvas = document.getElementById('myChart');
 
 // Our data
-const places = ['Campusgarten', 'Mühlbach', 'Interactive Media Lab', 'Mensa'];
-const votes = [12, 9, 5, 4];
+const places = ['Campusgarten', 'Mühlbach', 'Interactive Media Lab', 'Mensa', "Terrasse"];
+const votes = [12, 9, 5, 4, 5];
 
 // Create a new chart: new Chart(where, configuration)
 new Chart(canvas, {
